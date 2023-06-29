@@ -7,28 +7,28 @@ PRODUTOS DE MorroDeSede: [ Bebida  [nome = Vinho Branco, teorAlcool= 11.5], Bebi
 PRODUTOS DE So_Leitao: [ Sandocha, PicaPica]
 PRODUTOS DE A_Chicha: [ Sandocha, PicaPica]
 MERCADO: Mercado 
-bar
-bar
-Tasquinha [nome = %s, id = %d]
-Tasquinha [nome = %s, id = %d]
+	Bar [nome = MorroDeSede, id = 102]
+	Bar [nome = PubOO, id = 100]
+	Tasquinha [nome = So_Leitao, id = 201]
+	Tasquinha [nome = A_Chicha, id = 202]
 
-TOTAL DE PRODUTOS DO MERCADO: 4
+TOTAL DE PRODUTOS DO MERCADO: 11
 
 Alínea 2) ----------------------------------
 
 MERCADO: Mercado 
-bar
-bar
-bar
-Tasquinha [nome = %s, id = %d]
-Tasquinha [nome = %s, id = %d]
-Tasquinha [nome = %s, id = %d]
+	Bar [nome = OPipo, id = 10]
+	Bar [nome = Maresia, id = 11]
+	Bar [nome = BarFresco, id = 12]
+	Tasquinha [nome = KatieDosBifes, id = 20]
+	Tasquinha [nome = MariaDosOssos, id = 21]
+	Tasquinha [nome = AliceDasMaravilhas, id = 22]
 
-bar
-bar
-bar
-Tasquinha [nome = %s, id = %d]
-Tasquinha [nome = %s, id = %d]
-Tasquinha [nome = %s, id = %d]
+Bar [nome = OPipo, id = 10]
+Bar [nome = Maresia, id = 11]
+Bar [nome = BarFresco, id = 12]
+Tasquinha [nome = KatieDosBifes, id = 20]
+Tasquinha [nome = MariaDosOssos, id = 21]
+Tasquinha [nome = AliceDasMaravilhas, id = 22]
 -- LISTA DE PRODUTOS DO MERCADO --
-fef, feef, 
+Prego, Bifana, Panado, Costeleta, Perninha, Douradas, Nata, Mousse, 

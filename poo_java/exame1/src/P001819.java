@@ -19,6 +19,7 @@ public class P001819 {
 		test(System.out); // executa e escreve na consola
 		test(fl); // executa e escreve no ficheiro
 		fl.close();
+		
 	}
 
 	private static void test(PrintStream out) {

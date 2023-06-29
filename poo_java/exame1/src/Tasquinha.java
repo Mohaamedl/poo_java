@@ -20,10 +20,14 @@ public class Tasquinha extends Tenda {
         this.pratos = new String[]{};
 
     }
+    public List<String> getPratos() {
+        return Arrays.asList(pratos);
+    }
+    
     @Override
     public String toString() {
         
-        return "Tasquinha [nome = %s, id = %d]";
+        return String.format("Tasquinha [nome = %s, id = %d]",this.nome,this.id);
     }
     public void addPrato(String prato) {
         List<String> pratoss = new ArrayList<String>(Arrays.asList(this.pratos));
@@ -42,6 +46,9 @@ public class Tasquinha extends Tenda {
     }
     public String getNome() {
         return this.nome;
+    }
+    public int totalProdutos(){
+        return this.pratos.length;
     }
     public static void main(String[] args) throws FileNotFoundException {
         List<String> pratoss = new ArrayList<String>(Arrays.asList(new String[]{"batata"})) ;

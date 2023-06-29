@@ -65,8 +65,14 @@ public class Testing {
             System.out.println(t);
         }
         tests.forEach(t -> System.out.println(t.name));
-        List<String> resultList = list.stream().filter(s->s.length()<7).collect(Collectors.toList());
-        resultList.forEach(System.out::println);
+        List<String> resultList = list.stream()
+                                        .sorted(Comparator.reverseOrder())
+                                        .collect(Collectors.toList());
+        List<String> resultList2 = list.stream()
+                                        .sorted(Comparator.comparingInt(String::length).reversed())
+                                        .collect(Collectors.toList());
+        resultList2.forEach(System.out::println);
+        System.out.println(tests.get(2).getClass().getName());
     }
 
 

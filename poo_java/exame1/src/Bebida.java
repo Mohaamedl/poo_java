@@ -6,6 +6,12 @@ public class Bebida {
         this.nome = nome;
         this.alcool = alcool;
     }
+    public double getAlcool() {
+        return alcool;
+    }
+    public String getNome() {
+        return nome;
+    }
     @Override
     public String toString() {
         return String.format(" Bebida  [nome = %s, teorAlcool= %s]",this.nome,this.alcool );

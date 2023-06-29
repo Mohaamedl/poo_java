@@ -16,7 +16,7 @@ public class Bar extends Tenda{
 
     @Override
     public String toString() {
-        return "bar";
+        return String.format("Bar [nome = %s, id = %d]",nome,id);
     }
     public void add(Bebida bebida) {
         bebidas.add(bebida);

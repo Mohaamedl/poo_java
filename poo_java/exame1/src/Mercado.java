@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Mercado {
     public String nome;
@@ -13,7 +15,7 @@ public class Mercado {
     public String toString() {
         String s = "Mercado \n";
         for(Tenda tenda : this.tendas){
-            s = s + tenda.toString()+"\n";
+            s = s +"\t"+ tenda.toString()+"\n";
         }
 
 
@@ -25,11 +27,28 @@ public class Mercado {
         tendas.add(tenda);
     }
     public int totalItems() {
-        return this.tendas.size();
+        int sum = 0;
+        for(Tenda tenda : tendas){
+            if (tenda.getClass().getName()=="Bar") {
+                sum = sum + ((Bar) tenda).totalProdutos();
+
+            }
+            else sum = sum + ((Tasquinha) tenda).totalProdutos();
+        }
+        return sum;
     }
    
     public String[] getAllItems() {
-        return new String[]{"fef","feef"};
+        List<String> sum =new ArrayList<>();
+        for(Tenda tenda : tendas){
+            if (tenda.getClass().getName()=="Bar") {
+                ((Bar) tenda).getLista().stream().map(s->s.getNome()).collect(Collectors.toList()).forEach(s->sum.add(s));
+
+            }
+            else  ((Tasquinha) tenda).getPratos().stream().collect(Collectors.toList()).forEach(s->sum.add(s));
+        }
+        return sum.toArray(new String[sum.size()]);
+        
     }
     public Tenda[] tendas() {
         return this.tendas.toArray(new Tenda[this.tendas.size()]);
