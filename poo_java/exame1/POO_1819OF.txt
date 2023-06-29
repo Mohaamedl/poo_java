@@ -1,0 +1,34 @@
+
+Alínea 1) ----------------------------------
+
+MorroDeSede tem 4 bebidas
+PubOO tem 3 bebidas
+PRODUTOS DE MorroDeSede: [ Bebida  [nome = Vinho Branco, teorAlcool= 11.5], Bebida  [nome = Sumo, teorAlcool= 0.0], Bebida  [nome = Infusao, teorAlcool= 0.0], Bebida  [nome = Cerveja, teorAlcool= 6.3]]
+PRODUTOS DE So_Leitao: [ Sandocha, PicaPica]
+PRODUTOS DE A_Chicha: [ Sandocha, PicaPica]
+MERCADO: Mercado 
+bar
+bar
+Tasquinha [nome = %s, id = %d]
+Tasquinha [nome = %s, id = %d]
+
+TOTAL DE PRODUTOS DO MERCADO: 4
+
+Alínea 2) ----------------------------------
+
+MERCADO: Mercado 
+bar
+bar
+bar
+Tasquinha [nome = %s, id = %d]
+Tasquinha [nome = %s, id = %d]
+Tasquinha [nome = %s, id = %d]
+
+bar
+bar
+bar
+Tasquinha [nome = %s, id = %d]
+Tasquinha [nome = %s, id = %d]
+Tasquinha [nome = %s, id = %d]
+-- LISTA DE PRODUTOS DO MERCADO --
+fef, feef, 

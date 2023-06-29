@@ -1,0 +1,69 @@
+@startuml
+
+
+interface KmPercorridosInterface{
+    +trajeto(int quilometros):void;
+    +ultimoTrajeto():int;
+    +distanciaTotal():int;
+}
+abstract class Veiculo{
+    #matricula: String 
+    #marca: String 
+    #modelo: String 
+    #potencia: int
+
+
+}
+class Motociclo{
+    #tipo: String 
+
+}
+class AutoLigeiro{
+    #numQuadro: int 
+    #capacidadeBag: double
+
+
+}
+class Taxi{
+    #numLicença: int
+
+}
+class PesadoMercadorias{
+    #numQuadro: int
+    #peso: double
+    #cargaMax: double
+}
+class PesadoPassageiros{
+    #numQuadro: int
+    #peso: double
+    #passageirosMax: int
+
+
+}
+class AutoEletrico{
+    
+}
+class PesadoPassageirosEletrico{
+
+}
+class Empresa{
+    #listaVeiculos: Veiculos
+    #nome: String 
+    #codigoPostal: String 
+    #email: String
+    {static} -VerificarEmail()
+}
+
+
+
+
+KmPercorridosInterface <|..Veiculo
+Veiculo <|--AutoLigeiro
+Veiculo <|--Motociclo
+Veiculo <|--PesadoMercadorias
+Veiculo <|--PesadoPassageiros
+AutoLigeiro <|--Taxi
+AutoLigeiro <|--AutoEletrico
+AutoLigeiro <|--PesadoPassageirosEletrico
+Empresa "1" *-- "n" Veiculo
+@enduml

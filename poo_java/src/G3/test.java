@@ -50,7 +50,7 @@ public class test {
                         System.out.println(t);
                     }
                     System.out.println("0 para ver menu");
-                    double s = sc.nextDouble();
+                    sc.nextDouble();
                     break;
                 }
                 
@@ -58,6 +58,7 @@ public class test {
             }
 
         }while(option!=0);
+        sc.close();
     
     }
 

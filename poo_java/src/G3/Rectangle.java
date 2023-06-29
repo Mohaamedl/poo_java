@@ -26,6 +26,12 @@ public class Rectangle {
     public void setSideB(double sideB) {
         if (this.sideA!=this.sideB) this.sideB = sideB;
     }
+    // methods
+    
+
+
+
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
