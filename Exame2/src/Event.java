@@ -16,5 +16,11 @@ public class Event {
     public String toString(){
         return "Event " + client.toString() +", data: "+parse;
     }
+    public Client getClient() {
+        return client;
+    }
+    public LocalDate getParse() {
+        return parse;
+    }
 
 }

@@ -1,6 +1,8 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class EventManager {
     private String name;
@@ -19,6 +21,15 @@ public class EventManager {
     public List<Event> getEvents() {
         return events;
     }
+    public String toString(){
+        String s = "Event Manager\nClients:[ ";
+        for (Client c :clients) s=s+"  "+c.toString();
+        s=s+"]\nEvents: [";
+        for (Event e :events) s=s+"  "+e.toString();
+        s=s+']';
+        return s;
+    }
+
     
     
 
@@ -48,10 +59,13 @@ public class EventManager {
         return events;
     }
     public String[] clientsWithEvents() {
-        return null;
+        String[] clientsWE =  events.stream().map(s->s.getClient().toString()).collect(Collectors.toList()).toArray(new String[events.size()]);
+        return clientsWE;
     }
     public String[] nextEventsByDate() {
-        return null;
+        String[] clientsWE =  events.stream().sorted(Comparator.comparing(Event::getParse)).map(String::valueOf).collect(Collectors.toList()).toArray(String[]::new);
+        
+        return clientsWE;
     }
    
     

@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.time.LocalDate;
 import java.util.*;
@@ -64,28 +65,36 @@ public class P002122 {
 		EventManager em = new EventManager("Funny Sports"); // modificar
 		
 		// Adicione a seguir o código necessário para a leitura do ficheiro 
-        try{
-			File file = new File("events.txt");
-			Scanner sn = new Scanner(file);
-			while(sn.hasNext()){
-				if(sn.nextLine().startsWith("#")){
-					String[] s =sn.nextLine().split(",");
-					Client c =em.addClient(s[0], s[1]);
-					Event e =em.addEvent(c, LocalDate.parse(s[2]));
-					while(sn.nextLine().startsWith("*")){
-						String[] s2 = sn.nextLine().split(",");
-						if(s2[0].equals("Culture")){e.addActivity(new Culture(Culture.Option.valueOf(s2[1]), (int) Integer.parseInt(s2[2])));}
-						if(s2[0].equals("Catring")){e.addActivity(new Catering(Catering.Option.valueOf(s2[1]), (int) Integer.parseInt(s2[2])));}
-						if(s2[0].equals("Sport")){e.addActivity(new Sport(Sport.Modality.valueOf(s2[1]), (int) Integer.parseInt(s2[2])));}
-					}
-				}
-				
-			}
-			sn.close();
-		    } 
-			catch(FileNotFoundException e) {
-				System.out.println("Ficheiro nao encontrado "+e);
-			}
+         try{
+            Scanner events = new Scanner(new File("events.txt")); 
+            Event e=null ;
+            while(events.hasNext()){
+                String line = events.nextLine();
+                String[] data ;
+                
+                if (line.startsWith("#")){
+                    data = line.replace("#","").replace(" ", "").split(",");
+                    Client c = em.addClient(data[0], data[1]);
+                    e = em.addEvent(c, LocalDate.parse(data[2]) );
+                    
+
+                }
+                else if(line.startsWith("*") && e!=null){
+                    data = line.replace("*","").replace(" ", "").split(",");
+                    switch(data[0]){
+                        case "Sport": e.addActivity(new Sport(Sport.Modality.valueOf(data[1]),Integer.parseInt(data[2])));break;
+                        case "Catering": e.addActivity(new Catering(Catering.Option.valueOf(data[1]),Integer.parseInt(data[2])));break;
+                        case "Culture": e.addActivity(new Culture(Culture.Option.valueOf(data[1]),Integer.parseInt(data[2])));break;
+                    }
+                    
+
+                }
+            }
+            
+
+        }catch(IOException e){ System.out.println("Error:" +e);
+
+        }
 		
 
 
@@ -96,6 +105,7 @@ public class P002122 {
 
 		if (em != null) {
 			out.println(em + ": CLIENTES COM EVENTOS");
+			
 			for (String s: em.clientsWithEvents())  // devolve todos os clientes com eventos agendados
 				out.println(s); 
 			out.println("\n" + em + ": LISTA DE PRÓXIMOS EVENTOS ORDENADOS POR DATA");	

@@ -1,0 +1,27 @@
+
+Alínea 1) ----------------------------------
+
+[Client [Name : The best;  Local : Aveiro], Client [Name : Team mates;  Local : Coimbra], Client [Name : Cool bunch;  Local : Viseu]]
+
+[Event Client [Name : The best;  Local : Aveiro], data: 2022-06-24, Event Client [Name : Team mates;  Local : Coimbra], data: 2022-06-30, Event Client [Name : Cool bunch;  Local : Viseu], data: 2022-06-25, Event Client [Name : The best;  Local : Aveiro], data: 2022-07-10]
+
+Alínea 2) ----------------------------------
+
+Event Manager
+Clients:[   Client [Name : MaltadaRia;  Local : Aveiro]  Client [Name : TudoBonsRapazes;  Local : Águeda]  Client [Name : MaltadaRia;  Local : Aveiro]  Client [Name : ArriscaTudo;  Local : CostaNova]  Client [Name : RéguaeEsquadro;  Local : Espinho]]
+Events: [  Event Client [Name : MaltadaRia;  Local : Aveiro], data: 2022-07-01  Event Client [Name : TudoBonsRapazes;  Local : Águeda], data: 2022-07-22  Event Client [Name : MaltadaRia;  Local : Aveiro], data: 2022-07-01  Event Client [Name : ArriscaTudo;  Local : CostaNova], data: 2022-07-13  Event Client [Name : RéguaeEsquadro;  Local : Espinho], data: 2022-07-11]: CLIENTES COM EVENTOS
+Client [Name : MaltadaRia;  Local : Aveiro]
+Client [Name : TudoBonsRapazes;  Local : Águeda]
+Client [Name : MaltadaRia;  Local : Aveiro]
+Client [Name : ArriscaTudo;  Local : CostaNova]
+Client [Name : RéguaeEsquadro;  Local : Espinho]
+
+Event Manager
+Clients:[   Client [Name : MaltadaRia;  Local : Aveiro]  Client [Name : TudoBonsRapazes;  Local : Águeda]  Client [Name : MaltadaRia;  Local : Aveiro]  Client [Name : ArriscaTudo;  Local : CostaNova]  Client [Name : RéguaeEsquadro;  Local : Espinho]]
+Events: [  Event Client [Name : MaltadaRia;  Local : Aveiro], data: 2022-07-01  Event Client [Name : TudoBonsRapazes;  Local : Águeda], data: 2022-07-22  Event Client [Name : MaltadaRia;  Local : Aveiro], data: 2022-07-01  Event Client [Name : ArriscaTudo;  Local : CostaNova], data: 2022-07-13  Event Client [Name : RéguaeEsquadro;  Local : Espinho], data: 2022-07-11]: LISTA DE PRÓXIMOS EVENTOS ORDENADOS POR DATA
+Event Client [Name : MaltadaRia;  Local : Aveiro], data: 2022-07-01
+Event Client [Name : MaltadaRia;  Local : Aveiro], data: 2022-07-01
+Event Client [Name : RéguaeEsquadro;  Local : Espinho], data: 2022-07-11
+Event Client [Name : ArriscaTudo;  Local : CostaNova], data: 2022-07-13
+Event Client [Name : TudoBonsRapazes;  Local : Águeda], data: 2022-07-22
+
