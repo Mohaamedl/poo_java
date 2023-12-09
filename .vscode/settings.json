@@ -1,0 +1,21 @@
+{
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+    "debug.console.fontSize": 18,
+    "workbench.colorCustomizations": {
+        "terminal.background": "#062135",
+        "terminal.foreground": "#ffffff",
+        "debugConsole.infoForeground": "#ffffff",
+    },
+    "java.debug.settings.showLogicalStructure": true,
+    "outline.showVariables": false,
+    "breadcrumbs.showVariables": true,
+    "editor.showDeprecated": true,
+    "editor.suggest.showVariables": true
+}

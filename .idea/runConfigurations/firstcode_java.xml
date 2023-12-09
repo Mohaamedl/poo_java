@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="firstcode.java" type="Java Scratch">
+    <option name="MAIN_CLASS_NAME" value="firstcode" />
+    <module name="Ambiente de Trabalho" />
+    <shortenClasspath name="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

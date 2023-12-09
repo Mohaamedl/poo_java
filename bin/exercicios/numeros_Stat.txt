@@ -1,0 +1,4 @@
+Valor minimo = -978
+Valor maximo = 999
+Media dos valores = 86
+
